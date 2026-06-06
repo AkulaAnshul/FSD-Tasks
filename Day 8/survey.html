@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey</title>
+        <meta name="description" content="Society feedback survey.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="surveyToast" class="toast-notification">
+            <span>Feedback submitted successfully! Thank you.</span>
+        </div>
+        
+        <header>
+            <div class="header-container">
+                <h1>Society Survey</h1>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid-section">
+                
+                <div class="card">
+                    <h2>Survey Topics</h2>
+                    
+                    <form id="surveyForm">
+                        
+                        <p>
+                            <label><b>Cleanliness Satisfaction:</b></label><br>
+                            <div class="survey-options">
+                                <input type="radio" id="clean-good" name="cleanliness" value="good" checked>
+                                <label for="clean-good">Good</label>
+                                
+                                <input type="radio" id="clean-avg" name="cleanliness" value="average">
+                                <label for="clean-avg">Average</label>
+                                
+                                <input type="radio" id="clean-bad" name="cleanliness" value="bad">
+                                <label for="clean-bad">Bad</label>
+                            </div>
+                        </p>
+
+                        <p>
+                            <label><b>Security Services (Select all areas needing improvement):</b></label><br>
+                            <div class="survey-options">
+                                <input type="checkbox" id="sec-gate" name="security_issues" value="gate_control">
+                                <label for="sec-gate">Main Gate Screening</label>
+                                
+                                <input type="checkbox" id="sec-patrol" name="security_issues" value="night_patrol">
+                                <label for="sec-patrol">Night Patrols</label>
+                                
+                                <input type="checkbox" id="sec-cctv" name="security_issues" value="cctv">
+                                <label for="sec-cctv">CCTV Coverage</label>
+                            </div>
+                        </p>
+
+                        <p>
+                            <label for="parking-zone"><b>Primary Parking Issues Location:</b></label><br>
+                            <select id="parking-zone" name="parking" style="width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 14px; margin-top: 8px; background-color: white;">
+                                <option value="none" selected>No major parking issues</option>
+                                <option value="visitor">Visitor Parking Violations</option>
+                                <option value="basement">Basement Blockages</option>
+                                <option value="reserved">Reserved Spot Disputes</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label><b>Water Supply Feedback:</b></label><br>
+                            <div class="survey-options">
+                                <input type="radio" id="water-good" name="water" value="good" checked>
+                                <label for="water-good">Sufficient / Smooth</label>
+                                
+                                <input type="radio" id="water-bad" name="water" value="bad">
+                                <label for="water-bad">Frequent Shortages</label>
+                            </div>
+                        </p>
+
+                        <p>
+                            <label><b>Maintenance Quality:</b></label><br>
+                            <div class="survey-options">
+                                <input type="radio" id="maint-good" name="maintenance" value="good" checked>
+                                <label for="maint-good">Good</label>
+                                
+                                <input type="radio" id="maint-avg" name="maintenance" value="average">
+                                <label for="maint-avg">Average</label>
+                                
+                                <input type="radio" id="maint-bad" name="maintenance" value="bad">
+                                <label for="maint-bad">Bad</label>
+                            </div>
+                        </p>
+                        
+                        <p>
+                            <label for="suggestions"><b>Suggestions Box (Optional):</b></label><br>
+                            <textarea id="suggestions" name="suggestions" rows="4" style="width: 100%; max-width: 100%; margin-top: 8px; padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 14px; box-sizing: border-box;"></textarea>
+                        </p>
+
+                        <div class="cta-container">
+                            <a href="#surveyToast" class="btn btn-primary" style="display: inline-block;">Submit Survey</a>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

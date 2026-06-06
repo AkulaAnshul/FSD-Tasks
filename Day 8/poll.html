@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Poll Management</title>
+        <meta name="description" content="Society Poll Management Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="voted" class="toast-notification">
+            <span>Your vote has been recorded successfully!</span>
+        </div>
+
+        <header>
+            <div class="header-container">
+                <h1>Society Poll Management</h1>
+            </div>
+        </header>
+
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <li class="sep-after"><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="results.html">Results</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            
+            <div class="welcome-box">
+                <p class="welcome-text">Active & Closed Polls</p>
+                <p class="sub-text">Cast your vote for the upcoming society leadership committees.</p>
+            </div>
+
+            <form id="pollsForm">
+                
+                <div class="grid-section">
+
+                    <div class="card">
+                        <h2>President Election</h2>
+                        <span class="date-badge" style="background-color: #d1fae5; color: #065f46;">Status: Active</span>
+                        <p class="sub-text" style="margin: 10px 0;">Select one primary candidate to lead the housing society board for the 2026 term.</p>
+                        
+                        <p><b>Timeline:</b> Oct 10 - Oct 25</p>
+                        
+                        <div class="survey-options" style="margin-top: 15px;">
+                            <input type="radio" id="pres-c1" name="president" value="candidate_a">
+                            <label for="pres-c1">John Doe</label>
+                            
+                            <input type="radio" id="pres-c2" name="president" value="candidate_b">
+                            <label for="pres-c2">Jane Smith</label>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Secretary Election</h2>
+                        <span class="date-badge" style="background-color: #d1fae5; color: #065f46;">Status: Active</span>
+                        <p class="sub-text" style="margin: 10px 0;">Choose up to two candidates for the joint-secretary management tasks.</p>
+                        
+                        <p><b>Timeline:</b> Oct 12 - Oct 27</p>
+                        
+                        <div class="survey-options" style="margin-top: 15px;">
+                            <input type="checkbox" id="sec-c1" name="secretary" value="candidate_x">
+                            <label for="sec-c1">Robert Chen</label>
+                            
+                            <input type="checkbox" id="sec-c2" name="secretary" value="candidate_y">
+                            <label for="sec-c2">Alice Manning</label>
+                            
+                            <input type="checkbox" id="sec-c3" name="secretary" value="candidate_z">
+                            <label for="sec-c3">Michael Fletcher</label>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Treasurer Election</h2>
+                        <span class="date-badge" style="background-color: #d1fae5; color: #065f46;">Status: Active</span>
+                        <p class="sub-text" style="margin: 10px 0;">Select the preferred candidate to manage the annual society budget allocations.</p>
+                        
+                        <p><b>Timeline:</b> Oct 14 - Oct 29</p>
+                        
+                        <div class="survey-options" style="margin-top: 15px;">
+                            <input type="checkbox" id="sec-c1" name="secretary" value="candidate_x">
+                            <label for="sec-c1">Thomas Anderson</label>
+                            
+                            <input type="checkbox" id="sec-c2" name="secretary" value="candidate_y">
+                            <label for="sec-c2">Peick Johnson</label>
+                            
+                            <input type="checkbox" id="sec-c3" name="secretary" value="candidate_z">
+                            <label for="sec-c3">Lisa Williams</label>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Cultural Committee Head</h2>
+                        <span class="date-badge" style="background-color: #d1fae5; color: #065f46;">Status: Active</span>
+                        <p class="sub-text" style="margin: 10px 0;">Write down your write-in nomination candidate or feedback regarding cultural events leadership.</p>
+                        
+                        <p><b>Timeline:</b> Oct 15 - Oct 30</p>
+                        
+                        <div class="survey-options" style="margin-top: 15px;">
+                            <input type="checkbox" id="sec-c1" name="secretary" value="candidate_x">
+                            <label for="sec-c1">James Carter</label>
+                            
+                            <input type="checkbox" id="sec-c2" name="secretary" value="candidate_y">
+                            <label for="sec-c2">Alice Manning</label>
+                            
+                            <input type="checkbox" id="sec-c3" name="secretary" value="candidate_z">
+                            <label for="sec-c3">Lisa Williams</label>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Security Coordinator Election</h2>
+                        <span class="date-badge" style="background-color: #d1fae5; color: #065f46;">Status: Active</span>
+                        <p class="sub-text" style="margin: 10px 0;">Vote for the supervisor to oversee gate management updates and guard scheduling protocols.</p>
+                        
+                        <p><b>Timeline:</b> Oct 18 - Nov 02</p>
+                        
+                        <div class="survey-options" style="margin-top: 15px;">
+                            <input type="radio" id="sec-coord1" name="security_coord" value="candidate_alpha">
+                            <label for="sec-coord1">Officer Tom Miller</label>
+                            
+                            <input type="radio" id="sec-coord2" name="security_coord" value="candidate_beta">
+                            <label for="sec-coord2">Arthur Pendelton</label>
+                        </div>
+                    </div>
+
+                    <div class="card" style="opacity: 0.65; background-color: #f8fafc;">
+                        <h2>Maintenance Board Election</h2>
+                        <span class="date-badge" style="background-color: #fee2e2; color: #991b1b;">Status: Closed</span>
+                        <p class="sub-text" style="margin: 10px 0;">This poll concluded last week. Results are compiled on the dashboard metrics.</p>
+                        
+                        <p><b>Timeline:</b> Sept 01 - Sept 15</p>
+                        
+                        <div style="margin-top: 15px;">
+                            <button type="button" class="btn" disabled style="background-color: #cbd5e1; color: #64748b; border: none; cursor: not-allowed; width: 100%; padding: 10px 0; font-size: 14px;">Voting Closed</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cta-container" style="margin-top: 40px; margin-bottom: 40px;">
+                    <a href="#voted" class="btn btn-primary" style="display: inline-block; padding: 16px 40px;">Submit Votes</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
