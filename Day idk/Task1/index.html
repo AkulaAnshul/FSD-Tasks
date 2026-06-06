@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://thumbs.dreamstime.com/b/state-college-logo-element-vector-illustration-decorative-design-191488103.jpg" alt="Logo" width="40" height="40" class="rounded-circle me-2">
+                <span class="fw-bold">Random College</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
+                        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                            <li><a class="dropdown-item" href="#">Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                            <li><a class="dropdown-item" href="#">Business Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn btn-outline-light px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.collegexpress.com/blog/understanding-campus-community-how-find-yours-public-college.jpg?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat; height: 400px;">
+                <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
+                    <h1 class="display-4 fw-bold">Welcome to Random College</h1>
+                    <p class="lead mb-4">Empowering minds, shaping futures, and building global leaders of tomorrow.</p>
+                    <a href="registration.html" class="btn btn-primary btn-lg px-4">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Key Features & Services</h2>
+            <p class="text-muted">Streamlined administrative control panels at your fingertips.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Registration">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Student Registration</h5>
+                        <p class="card-text text-muted">Seamlessly register your courses, academic choices, and tracks through our online application wizard.</p>
+                        <a href="registration.html" class="btn btn-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Attendance">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Attendance Management</h5>
+                        <p class="card-text text-muted">Monitor and track your overall class presence distributions and target internal benchmarks smoothly.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=400" class="card-img-top" alt="Results">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Results Management</h5>
+                        <p class="card-text text-muted">Instantly fetch official term records, score spreadsheets, evaluations, and overall performance metrics.</p>
+                        <a href="dashboard.html" class="btn btn-primary mt-auto">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5 pt-4">
+            <h3 class="fw-bold text-center mb-4">Frequently Asked Questions</h3>
+            <div class="accordion" id="portalFaq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                            How do I update my registration records?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#portalFaq">
+                        <div class="accordion-body">
+                            Navigate directly to the <strong>Registration Tab</strong>, fill out your mandatory information, and upload files to refresh processing queues.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                            When are attendance analytics updated?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#portalFaq">
+                        <div class="accordion-body">
+                            Classroom databases parse data directly into the <strong>Student Dashboard Tables</strong> every evening at 18:00 hours.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-2 pb-2 border-top">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 text small">&copy; 2026 Random College Portal Ecosystem. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Facebook</a>
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Twitter</a>
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Instagram</a>
+                    <a href="#" class="text-white-50 text-decoration-none small">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Portal Authentication Access</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form onsubmit="event.preventDefault(); alert('Authentication Connection Simulation Successful.');">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">User ID</label>
+                            <input type="text" class="form-control" placeholder="Enter Registration ID" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Password</label>
+                            <input type="password" class="form-control" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-2 py-2">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
