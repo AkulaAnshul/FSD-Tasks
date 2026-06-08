@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Random College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .btn {
+            border-radius: 50px;
+            background-color: black;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-4px);
+            background-color: white;
+            border-color: black;
+            color: black;
+        }
+        /* Custom image hover tuning */
+        .gallery-card img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://thumbs.dreamstime.com/b/state-college-logo-element-vector-illustration-decorative-design-191488103.jpg" alt="Logo" width="40" height="40" class="rounded-circle me-2">
+                <span class="fw-bold">Random College</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-auto px-4" type="button">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 flex-shrink-0">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Captured Moments</h2>
+            <p class="text-muted">A visual testimony of questionable choices.</p>
+        </div>
+
+        <!-- Grid Layout Base Setup -->
+        <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwlIG8ON9Yqgtvrcs_sLa6sWiU0w1UPICycA&s" class="img-fluid" alt="Caffeine Cram-Off" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">The Caffeine Cram-Off</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://oncampusadvertising.com/wp-content/uploads/2019/03/college-event-pic.jpg" class="img-fluid" alt="The Great GPA Limbo" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">The Great GPA Limbo</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SZre6-NKdcOWUi_GZV5Tk4GQAn5ucksYWA&s" class="img-fluid" alt="Procrastination Olympics" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">Procrastination Olympics</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://events.utk.edu/wp-content/uploads/sites/33/2019/01/eclipse.jpg" class="img-fluid" alt="Deferred Adulting Workshop" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">Deferred Adulting Seminar</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhODcSyJx096xQGUUohsl1oFHDgABG-THgIA&s" class="img-fluid" alt="Dorm Room Panic" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">Dorm Room Cleaning Panic</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="card gallery-card h-100 shadow-sm overflow-hidden border-0">
+                    <img src="https://cdn.prod.website-files.com/62266fcc3d860c71f00bca09/6425b7e03ba13e73d0359c4c_Students-at-college-concert.jpg" class="img-fluid" alt="Communal Fridge Expedition" style="height: 250px; object-fit: cover;">
+                    <div class="card-body py-3">
+                        <h6 class="card-title fw-bold mb-0">Communal Fridge Expedition</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-3 pb-3 border-top mt-auto">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 small">&copy; 2026 Random College Portal Ecosystem. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Facebook</a>
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Twitter</a>
+                    <a href="#" class="text-white-50 text-decoration-none me-3 small">Instagram</a>
+                    <a href="#" class="text-white-50 text-decoration-none small">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
