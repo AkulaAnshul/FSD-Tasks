@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Storage Demo</title>
+</head>
+<body>
+    <h1>JS Storage Demo</h1>
+    <form onsubmit="event.preventDefault();">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your Name">
+        <br><label>Email</label>
+        <input type="email" id="email" placeholder="Enter your Email">
+        <br>
+        <button onclick="saveToLocal()">Save to Local Storage</button>
+        <br><button onclick="saveToSession()">Save to Session Storage</button>
+        <br><button onclick="showData()">Get All Data</button>
+        <br><button onclick="showDataName()">Show specific data</button>
+        <br><button onclick="clearSessionData()">Clear Session Data</button>
+        <br><button onclick="clearLocalData()">Clear Local Data</button>
+        <p id="output" style="white-space: pre-line;"></p>
+    </form>
+    <script>
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const outputParagraph = document.getElementById('output');
+        function saveToLocal(){
+            let nameValue = nameInput.value;
+            let emailValue = emailInput.value;
+            localStorage.setItem(nameValue, emailValue);
+            alert("Updated Local Storage");
+        }
+        function saveToSession(){
+            let nameValue = nameInput.value;
+            let emailValue = emailInput.value;
+            sessionStorage.setItem(nameValue, emailValue);
+            alert("Updated Session Storage");
+        }
+        function showData(){
+            let displayText = "--- LOCAL STORAGE --- \n";
+            if (localStorage.length === 0) {
+                displayText += "No data found.\n";
+            }
+            else {
+                for (let i = 0; i < localStorage.length; i++) {
+                    let key = localStorage.key(i);
+                    let value = localStorage.getItem(key);
+                    displayText += `${key}: ${value}\n`;
+                }
+            }
+            displayText += "\n--- SESSION STORAGE --- \n";
+            if (sessionStorage.length === 0) {
+                displayText += "No data found.\n";
+            }
+            else{
+                for (let i = 0; i < sessionStorage.length; i++) {
+                    let key = sessionStorage.key(i);
+                    let value = sessionStorage.getItem(key);
+                    displayText += `${key}: ${value}\n`;
+                }
+            }
+            outputParagraph.innerText = displayText;
+        }
+        function clearLocalData() {
+            localStorage.clear();
+            showData();
+        }
+        function clearSessionData() {
+            sessionStorage.clear();
+            showData();
+        }
+        function showDataName(){
+            let nameToSearch = nameInput.value;
+            let result = localStorage.getItem(nameToSearch);
+            
+            if(result) {
+                outputParagraph.innerText = `Found Email: ${result}`;
+            } else {
+                outputParagraph.innerText = `No data found for "${nameToSearch}"`;
+            }
+        }
+    </script>
+</body>
+</html>
